@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Style Transfer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neural Style Transfer</h1>
+        <p class="description">Upload your content and style images to generate a beautiful stylized image.</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="file-input">
+                <label for="content">Content Image:</label>
+                <input type="file" id="content" name="content" accept="image/*" required>
+            </div>
+            <div class="file-input">
+                <label for="style">Style Image:</label>
+                <input type="file" id="style" name="style" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn">Transfer Style</button>
+        </form>
+    </div>
+</body>
+</html>
